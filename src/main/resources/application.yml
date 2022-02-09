@@ -1,0 +1,9 @@
+server:
+  port: 9443
+  ssl:
+    key-store: D:\tomcat2.keystore
+    key-store-password: 123456
+    key-alias: tomcat
+    key-store-type: PKCS12
+
+#  keytool.exe -genkeypair -alias "tomcat" -keyalg "RSA" -keystore "D:\tomcat2.keystore" -deststoretype pkcs12 -validity 365

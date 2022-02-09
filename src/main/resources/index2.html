@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>WebRTC 系列文章 一对一视频通话和文字聊天以及文件共享</title>
+
+      <!-- Compiled and minified CSS -->
+      <link href="https://s2.pstatp.com/cdn/expire-1-M/materialize/0.99.0/css/materialize.min.css" type="text/css" rel="stylesheet" />
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <link href="https://s2.pstatp.com/cdn/expire-1-M/font-awesome/5.8.1/css/all.min.css" type="text/css" rel="stylesheet" />
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style>
+      body {
+        background-color: #3D6DF2;
+        margin-top: 15px;
+        font-family: sans-serif;
+        color: white;
+      }
+
+      video {
+        background: black;
+        border: 1px solid gray;
+      }
+
+      .page {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 500px;
+        height: 500px;
+      }
+
+      #yours {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+      }
+
+      #theirs {
+        width: 500px;
+        height: 500px;
+      }
+
+      #received {
+        display: block;
+        width: 480px;
+        height: 100px;
+        background: white;
+        padding: 10px;
+        margin-top: 10px;
+        color: black;
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="login-page" class="page">
+      <h2>登录</h2>
+      <div class="input-field col s6">
+      <input placeholder="账户" type="text" id="username"/>
+      </div>
+      <button class="waves-effect waves-light btn" id="login">登录</button>
+  </div>
+
+  <div class="container">
+
+  <div id="call-page" class="page">
+      <video class="responsive-video" id="yours" muted="muted" autoplay></video>
+      <video class="responsive-video" id="theirs" muted="muted" autoplay></video>
+
+      <hr>
+
+      <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+      <input type="text"  id="their-username"/>
+      </div>
+      <button id="call" class="waves-effect waves-light green btn" >Call</button>
+      <button id="hang-up" class="waves-effect waves-light amber btn" >Hang Up</button>
+
+      <div class="row">
+      <div class="input-field col s10">
+          <i class="material-icons prefix">mode_edit</i>
+      <input type="text" id="message" placeholder="请输入要发送的消息"></input>
+      </div>
+
+      <div class="col s2">
+      <button id="send" class="waves-effect waves-light btn blue lighten-1">Send</button>
+      </div>
+
+      </div>
+
+      <div id="received"></div>
+
+      <br>
+      <hr>
+      <h2>File Sharing</h2>
+      <div class="container green darken-2">
+          <!--      <input type="text" id="their-username" />-->
+          <button id="connect" class="waves-effect waves-light btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="文件共享第一步">准备开始文件共享</button>
+
+          <button id="readySend" class="waves-effect waves-light btn tooltipped red lighten-2" data-position="bottom" data-delay="50" data-tooltip="文件共享第二步，需要点击两次哦">连接对方并准备开始共享文件 - 需要点击两次</button>
+
+          <div id="ready">Ready!</div>
+
+          <br/>
+          <br/>
+
+          <div class="file-field input-field">
+              <div class="btn">
+                  <span>文件</span>
+                  <input type="file" id="files" name="file"/>
+              </div>
+              <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text">
+              </div>
+          </div>
+
+          <br>
+
+          <button id="sendFile" class="waves-effect waves-light btn-floating tooltipped blue" data-position="bottom" data-delay="50" data-tooltip="文件共享第三步">
+              <i class="material-icons">publish</i>
+          </button>
+
+          <br/>
+          <br/>
+
+          <div id="status"></div>
+      </div>
+
+  </div>
+
+  </div>
+
+    <script src="part3.js?v=003"></script>
+  <script src="https://s2.pstatp.com/cdn/expire-1-M/jquery/3.2.1/jquery.min.js" type="application/javascript"></script>
+  <script src="https://s3.pstatp.com/cdn/expire-1-M/materialize/0.99.0/js/materialize.min.js" type="application/javascript"></script>
+
+
+  </body>
+
+  <script>
+      $(document).ready(function(){
+          // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+          $('.modal').modal();
+      });
+
+
+      // Initialize collapse button
+      $(".button-collapse").sideNav();
+      // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+      //$('.collapsible').collapsible();
+      $(document).ready(function(){
+          $('ul.tabs').tabs();
+      });
+
+  </script>
+
+</html>

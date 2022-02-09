@@ -1,0 +1,7 @@
+server:
+  port: 9443
+  ssl:
+    key-store: /root/webrtc/tomcat2.keystore
+    key-store-password: 123456
+    key-alias: tomcat
+    key-store-type: PKCS12
