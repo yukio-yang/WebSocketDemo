@@ -8,4 +8,8 @@ public class GitTest {
 	public static void main(String[] args) {
 		System.out.println("git修改测试");
 	}
+
+	public void test2() {
+		System.out.println("子分支修改测试");
+	}
 }
