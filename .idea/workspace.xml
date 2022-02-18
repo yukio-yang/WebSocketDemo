@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8fb395ea-1944-41b7-902b-1fe1a7b7a228" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/websocket/demo/utils/GitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/websocket/demo/utils/GitTest.java" afterDir="false" />
+>>>>>>> origin/test2
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,6 +34,8 @@
                 <element signature="e#177#178#0" expanded="true" />
                 <element signature="e#211#212#0" expanded="true" />
                 <element signature="e#238#239#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#308#309#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -255,7 +261,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="7984000" />
+=======
+    <option name="totallyTimeSpent" value="7387000" />
+>>>>>>> origin/test2
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -494,6 +504,8 @@
             <element signature="e#177#178#0" expanded="true" />
             <element signature="e#211#212#0" expanded="true" />
             <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
           </folding>
         </state>
       </provider>
